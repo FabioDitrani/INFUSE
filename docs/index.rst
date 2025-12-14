@@ -22,8 +22,15 @@ Introduction
 
 **Project Name:** ``INFUSE``
 
-``INFUSE`` (Full-INdex Fitting for Uncovering Stellar Evolution) is a simple Python-based script that identifies connected structures above a user-given signal-to-noise (S/N) threshold in 2D and 3D datasets.
-It also allows masking bad regions where extraction should not be performed.
+``INFUSE`` (Full-INdex Fitting for Uncovering Stellar Evolution) is a Python-based tool designed to infer stellar population properties
+from observed spectra of galaxies and stellar systems. 
+The code performs a **full-index fitting** analysis by comparing
+observed spectral indices with predictions from
+**stellar population synthesis (SPS) models**,
+such as the **sMILES** models.
+INFUSE uses a **nested sampling algorithm** to efficiently explore
+the multi-dimensional parameter space and to derive robust posterior
+probability distributions for the stellar population parameters.
 
 Installation
 ============
@@ -39,7 +46,7 @@ Installation
    ::
 
        git clone https://github.com/FabioDitrani/INFUSE.git
-       cd SHINE
+       cd INFUSE
 
 2. Install the code:
    ::
@@ -51,7 +58,7 @@ Directory Contents
 ==================
 The github distribution includes a INFUSE/ directory that contains the following codes:
 
-- ``SHINE.py``: The main Python file containing the code for the extraction process.
+- ``INFUSE.py``: The main Python file containing the code for the extraction process.
 - ``GUI_SHINE.py``: The Python file containing the code for the GUI.
 - ``Make_Im_SHINE.py``: The Python file for the tool used to analyze the extraction results. It generates 2D images.
 
