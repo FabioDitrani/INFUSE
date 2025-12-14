@@ -41,16 +41,12 @@ Installation
 
 **Steps to Install:**
 
-1. Clone the repository:
-   ::
+Clone the repository and run the main script from the repository root:
 
-       git clone https://github.com/FabioDitrani/INFUSE.git
-       cd INFUSE
-
-2. Install the code:
-   ::
-
-       python -m pip install .
+```bash
+git clone https://github.com/FabioDitrani/INFUSE.git
+cd INFUSE
+python infuse.py
 
 
 Directory Contents
@@ -58,15 +54,12 @@ Directory Contents
 The github distribution includes a INFUSE/ directory that contains the following codes:
 
 - ``INFUSE.py``: The main Python file containing the code for the extraction process.
-- ``GUI_SHINE.py``: The Python file containing the code for the GUI.
-- ``Make_Im_SHINE.py``: The Python file for the tool used to analyze the extraction results. It generates 2D images.
+- ``models``: Folder containing the stellar population models.
+- ``Functions.py``: The Python file containing all the functions and class used in INFUSE.py.
 
 
-Usage of INFUSE and tools
-=================
-``SHINE`` and ``Make_Im_SHINE`` are installed as executables and can be run directly from the terminal. Below is an explanation of the different ways to execute the code.
-
-The extraction is performed using ``SHINE``. The basic idea behind the code is as follows:
+Main Features
+-------------
 
 
 - Reading and handling **observed spectra**
