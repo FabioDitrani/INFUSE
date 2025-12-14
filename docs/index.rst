@@ -5,12 +5,12 @@
 
 
 ==========================
-Documentation of SHINE
+Documentation of INFUSE
 ==========================
 
-**Authors:** Matteo Fossati, Davide Tornotti  
+**Authors:** Fabio Rosario Ditrani 
 
-**Date:**  20/01/2025
+**Date:**  14/12/2025
 
 .. contents::
    :depth: 2
@@ -20,9 +20,9 @@ Documentation of SHINE
 Introduction
 ============
 
-**Project Name:** ``SHINE``
+**Project Name:** ``INFUSE``
 
-``SHINE`` (Spectral Highlighting and Identification of Emission) is a simple Python-based script that identifies connected structures above a user-given signal-to-noise (S/N) threshold in 2D and 3D datasets.
+``INFUSE`` (Full-INdex Fitting for Uncovering Stellar Evolution) is a simple Python-based script that identifies connected structures above a user-given signal-to-noise (S/N) threshold in 2D and 3D datasets.
 It also allows masking bad regions where extraction should not be performed.
 
 Installation
