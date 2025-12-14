@@ -111,6 +111,7 @@ Applications
 ------------
 
 INFUSE is suited for:
+
 - Stellar population analysis of galaxies
 - studies of age, metallicity, and abundance patterns
 - comparison of different SPS model libraries
