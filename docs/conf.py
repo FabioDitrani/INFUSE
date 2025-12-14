@@ -8,7 +8,7 @@ import os
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'codice-pippo'
+project = 'INFUSE'
 copyright = '2025, ***'
 author = '***'
 release = '1.1'
@@ -50,7 +50,7 @@ html_static_path = ['_static']
 #html_logo = '_static/logo.png'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'pippodoc'
+htmlhelp_basename = 'infusedoc'
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
