@@ -103,6 +103,7 @@ and information-rich fitting scheme.
 
 The posterior distribution of the model parameters is sampled using
 a nested sampling approach, allowing for:
+
 - efficient parameter space exploration
 - evidence computation
 - robust uncertainty estimates
