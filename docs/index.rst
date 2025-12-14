@@ -78,12 +78,44 @@ The extraction is performed using ``SHINE``. The basic idea behind the code is a
 - Control plots comparing **observed and best-fit spectral indices**
 
 
-For 3D data only, it is possible to use Make_Im_SHINE to create the associated image by collapsing the voxels in the z-direction using the labeled cube.
-This tool is designed to create three different types of images (``flux``, ``mean`` or ``median``) both selecting only certain voxels based on a 3D mask with associated Ids (e.g. the output labels cube of ``SHINE``, thus creating an extraction image) and all the voxels (thus creating a narrow band image). If ``flux`` is selected, the units of the output image are :math:`1 \times 10^{-18} \, \mathrm{erg \, s^{-1} \, cm^{-2} \, arcsec^{-2}}`.
-Using a single Id object it is also possible to obtain an image with the representative pseudo narrow band around it (the width is specified by the user with ``--nsl`` and ``--nsladd``.
+Scientific Method
+-----------------
 
+INFUSE implements a generalised full-index fitting approach based on
+a **pixel-by-pixel flux comparison** restricted to selected
+spectral features.
 
-.. _changelog:
+For each spectral index, both the observed spectrum and the SPS model
+spectra are **normalised to the pseudo-continuum** defined by the
+classical index bandpasses. The fitting is then performed by comparing
+the **flux values at each wavelength pixel** within the index
+feature window, rather than by directly comparing integrated index
+measurements.
+
+The likelihood function is constructed by evaluating the agreement
+between the continuum-normalized observed and model fluxes within the
+selected index regions, taking into account the observational
+uncertainties at each pixel.
+
+This approach preserves the conceptual framework of classical
+absorption-line index analysis, while extending it to a more flexible
+and information-rich fitting scheme.
+
+The posterior distribution of the model parameters is sampled using
+a nested sampling approach, allowing for:
+- efficient parameter space exploration
+- evidence computation
+- robust uncertainty estimates
+
+Applications
+------------
+
+INFUSE is suited for:
+- stellar population analysis of galaxies
+- studies of age, metallicity, and abundance patterns
+- comparison of different SPS model libraries
+- testing spectral diagnostics based on absorption-line indices
+
 
 Changelog
 =========
