@@ -31,14 +31,14 @@ Installation
 **Requirements:**
 
 - Python version: ``>=3.8``
-- Dependencies: ``numpy``, ``scipy``, ``astropy``, ``connected-components-3d``
+- Dependencies: ``numpy``, ``corner``, ``astropy``, ``ultranest``, ``matplotlib``
 
 **Steps to Install:**
 
 1. Clone the repository:
    ::
 
-       git clone https://github.com/matteofox/SHINE.git
+       git clone https://github.com/FabioDitrani/INFUSE.git
        cd SHINE
 
 2. Install the code:
@@ -49,14 +49,14 @@ Installation
 
 Directory Contents
 ==================
-The github distribution includes a shine/ directory that contains the following codes:
+The github distribution includes a INFUSE/ directory that contains the following codes:
 
 - ``SHINE.py``: The main Python file containing the code for the extraction process.
 - ``GUI_SHINE.py``: The Python file containing the code for the GUI.
 - ``Make_Im_SHINE.py``: The Python file for the tool used to analyze the extraction results. It generates 2D images.
 
 
-Usage of SHINE and tools
+Usage of INFUSE and tools
 =================
 ``SHINE`` and ``Make_Im_SHINE`` are installed as executables and can be run directly from the terminal. Below is an explanation of the different ways to execute the code.
 
