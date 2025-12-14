@@ -26,9 +26,8 @@ Introduction
 from observed spectra of galaxies and stellar systems. 
 The code performs a **full-index fitting** analysis by comparing
 observed spectral indices with predictions from
-**stellar population synthesis (SPS) models**,
-such as the **sMILES** models.
-INFUSE uses a **nested sampling algorithm** to efficiently explore
+**stellar population synthesis (SPS) models** (e.g. **sMILES**).
+``INFUSE`` uses a **nested sampling algorithm** to efficiently explore
 the multi-dimensional parameter space and to derive robust posterior
 probability distributions for the stellar population parameters.
 
@@ -69,12 +68,15 @@ Usage of INFUSE and tools
 
 The extraction is performed using ``SHINE``. The basic idea behind the code is as follows:
 
-1. (Optional, applicable to 3D data only) Select a portion of the cube (in the z-direction or wavelength direction) where the user wants to focus the extraction.
-2. Mask certain voxels using a user-provided mask (e.g., continuum sources).
-3. Spatially filter the cube/image and the associated 2D or 3D variance using a user-defined kernel dimension.
-4. Apply a threshold to the cube/image based on the user-defined S/N threshold.
-5. Group connected voxels (3D)/pixels (2D) that meet the S/N threshold and other user-defined parameters.
-6. Generate and save the catalog along with the labeled cube/image.
+
+- Reading and handling **observed spectra**
+- Loading **stellar population synthesis models** (e.g. sMILES)
+- Measurement and selection of **spectral indices**
+- Full-index fitting between models and observations
+- Bayesian inference using **nested sampling**
+- Diagnostic plots to inspect **posterior distributions**
+- Control plots comparing **observed and best-fit spectral indices**
+
 
 For 3D data only, it is possible to use Make_Im_SHINE to create the associated image by collapsing the voxels in the z-direction using the labeled cube.
 This tool is designed to create three different types of images (``flux``, ``mean`` or ``median``) both selecting only certain voxels based on a 3D mask with associated Ids (e.g. the output labels cube of ``SHINE``, thus creating an extraction image) and all the voxels (thus creating a narrow band image). If ``flux`` is selected, the units of the output image are :math:`1 \times 10^{-18} \, \mathrm{erg \, s^{-1} \, cm^{-2} \, arcsec^{-2}}`.
